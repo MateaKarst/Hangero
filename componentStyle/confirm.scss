@@ -1,0 +1,39 @@
+@mixin centerItem() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm {
+    width: 100%;
+    height: 70vh;
+    @include centerItem();
+
+    .confirmWrapper {
+        max-width: 400px;
+        @include centerItem();
+        flex-direction: column;
+        gap: 20px;
+
+
+        .confirmIcon {
+            font-size: 3rem;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            @include centerItem();
+
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+                background-color: white;
+                border-color: black;
+            }
+        }
+    }
+
+}

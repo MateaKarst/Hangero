@@ -1,0 +1,28 @@
+.payment {
+  width: 100%;
+  height: auto;
+}
+.paymentWrapper {
+  max-width: 500px;
+  margin: 120px auto;
+  text-align: center;
+}
+.paymentWrapper .paymentTitle {
+  font-size: 2rem;
+}
+.paymentWrapper .methodWrapper {
+  margin-top: 50px;
+  font-size: 3rem;
+}
+.paymentWrapper .methodWrapper .method {
+  cursor: pointer;
+  color: rgb(71, 71, 71);
+}
+
+@media screen and (min-width: 768px) {
+  .paymentWrapper .methodWrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 5rem;
+  }
+}/*# sourceMappingURL=payment.css.map */

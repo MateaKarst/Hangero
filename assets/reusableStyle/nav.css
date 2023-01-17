@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+  transition: 0.3s ease-in-out;
+}
+
+button,
+a,
+input,
+ul,
+ol,
+li {
+  all: unset;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 85%;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 7.5vw;
+}
+
+.navPC {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+.navPC .navWrapper {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 7.5vw;
+  display: none;
+  justify-content: space-between;
+  padding: 15px 24px;
+  background-color: white;
+  border-radius: 20px;
+}
+.navPC .navWrapper .logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navPC .navWrapper .logoWrapper .Logo {
+  font-size: 45px;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+.navPC .navWrapper .searchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navPC .navWrapper .searchBar .searchInput {
+  position: relative;
+  min-width: 350px;
+  display: flex;
+  background-color: #ededed;
+  border-radius: 40px;
+  transition: 0.4s;
+}
+.navPC .navWrapper .searchBar .searchInput input {
+  padding: 14px 20px;
+  flex-grow: 1;
+}
+.navPC .navWrapper .searchBar .searchInput .search {
+  padding: 14px 20px;
+}
+.navPC .navWrapper .searchBar .searchInput:hover, .navPC .navWrapper .searchBar .searchInput:active, .navPC .navWrapper .searchBar .searchInput:focus {
+  background-color: #eeeeee;
+  transition: 0.4s;
+  box-shadow: inset 0px 0px 20px #000000;
+  box-shadow: 0px 0px 20px #c2c2c2;
+}
+.navPC .navWrapper .personalIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navPC .navWrapper .personalIcons .shoppingIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  font-size: 21.4px;
+}
+.navPC .navWrapper .personalIcons .shoppingIcons button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.navPC .navWrapper .personalIcons .shoppingIcons button .iconWrapperPC {
+  display: block;
+  height: 27px;
+  width: 24px;
+}
+.navPC .navWrapper .personalIcons .navIcons {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.dropDownContainer {
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.dropDownContainer .dropDown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  overflow: hidden;
+  width: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.dropDownContainer .dropDown li {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.dropDownContainer .dropDown li a {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+  transition: 0.3s ease-in-out;
+}
+.dropDownContainer .dropDown li a i ::before {
+  line-height: normal;
+}
+.dropDownContainer .dropDown li a:hover {
+  color: #000000;
+  transition: 0.3s ease-in-out;
+  border-left: 2px solid black;
+  background-color: rgb(237, 237, 237);
+  box-shadow: rgba(149, 157, 165, 0.355) 0px 8px 24px;
+}
+.dropDownContainer:hover .dropDown {
+  transition: 0.3s ease-in-out;
+  display: block;
+}
+.dropDownContainer:hover .dropDown:hover {
+  display: block;
+}
+
+.navMobile {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.navMobile .iconWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 7.5vw;
+  justify-content: space-between;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.profile {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.mobileLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.mobileLogo h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  .navPC .navWrapper {
+    display: flex;
+  }
+  .navMobile {
+    display: none;
+  }
+  .mobileLogo {
+    display: none;
+  }
+}/*# sourceMappingURL=nav.css.map */

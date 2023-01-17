@@ -1,0 +1,33 @@
+.confirm {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm .confirmWrapper {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.confirm .confirmWrapper .confirmIcon {
+  font-size: 3rem;
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.confirm .confirmWrapper .confirmIcon:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}/*# sourceMappingURL=confirm.css.map */

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangero</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font flat-ui cdn 2.2.2 -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.min.css"
+        integrity="sha512-PvB3Q4vTvWD/9aiiELYI3uebup/4mtou3Mc/uGudC/Zl+C9BdKUkAI+5jORfA+fvLK4DpzC5VyEN7P2kK43hjg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/reusableStyle/nav.css">
+    <link rel="stylesheet" href="../assets/reusableStyle/footer.css">
+    <link rel="stylesheet" href="../componentStyle/cart.css">
+    <link rel="stylesheet" href="../componentStyle/address.css">
+    <link rel="stylesheet" href="../assets/reusableStyle/logIn.css">
+    <!-- personal scripts -->
+    <script defer src="../assets/scripts/navScroll.js"></script>
+    <script defer src="../assets/scripts/addressSubmit.js"></script>
+    <script defer src="../assets/scripts/login.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navPC">
+            <div class="navWrapper">
+                <a class="logoWrapper" href="../index.html">
+                    <h1 class="Logo">Hangero</h1>
+                </a>
+
+                <div class="personalIcons">
+                    <div class="shoppingIcons">
+                        <button class="favoriteItems dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-star navIcons"></i></a>
+                        </button>
+                        <button class="messages dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-envelope navIcons"></i> </a>
+                        </button>
+                        <button class="shop dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-shop navIcons"></i></a>
+                        </button>
+                    </div>
+                    <button class="dropDownContainer">
+                        <div class="profile">
+                            <img class="pfpIcon" src="https://data.whicdn.com/images/346235339/original.jpg" alt="">
+                        </div>
+                        <ul class="dropDown">
+                            <li><a href=""><i class="fi fi-rr-document-signed"></i>order</a></li>
+                            <li><a href=""><i class="fi fi-rr-bookmark"></i>saved Items</a></li>
+                            <li><a href=""><i class="fa-solid fa-shop"></i>shop</a></li>
+                            <li><a href=""><i class="fi fi-rr-dollar"></i>sell</a></li>
+                            <li><a href=""><i class="fi fi-rr-paper-plane"></i>messages</a></li>
+                            <li><a href=""><i class="fi fi-rr-settings-sliders"></i>settings</a></li>
+                            <li><a href=""><i class="fi fi-rr-info"></i>help</a></li>
+                            <li><a href=""><i class="fi fi-rr-comments-question"></i>send feedback</a></li>
+                            <li><a><i class="fi fi-rr-exit"></i>Sign Out</span></li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobileLogo">
+            <a href="../index.html">
+                <h1>Hangero</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="processingWrapper">
+        <div class="processing">
+            <div class="stage">
+                <div class="dot checkDot"><i class="fi fi-rr-check"></i></div>
+                <span class="checked">Cart</span>
+            </div>
+            <div class="line"></div>
+            <div class="stage">
+                <div class="dot checkDot"><i class="fi fi-rr-check"></i></div>
+                <span class="checked">Address</span>
+            </div>
+            <div class="line"></div>
+            <div class="stage">
+                <div class="dot unChecked"></div>
+                <span>Payment</span>
+            </div>
+            <div class="line"></div>
+            <div class="stage">
+                <div class="dot unChecked"></div>
+                <span>Confirm</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="formWrappper">
+        <form class="addressForm" action="submit">
+            <h2 class="formTitle">Address</h2>
+            <div class="address">
+                <div class="username inputWrapper">
+                    <label class="inputLabel" for="username">Name:</label>
+                    <input name="username" required pattern="[A-Za-z]+"
+                        oninvalid="setCustomValidity('only letters are allowed')" class="inputField" type="text"
+                        id="username">
+                </div>
+                <div class="city inputWrapper">
+                    <label class="inputLabel" for="city">City:</label>
+                    <input required pattern="[A-Za-z]+" oninvalid="setCustomValidity('only letters are allowed')"
+                        class="inputField" type="text" id="city" name="city">
+                </div>
+                <div class="street inputWrapper">
+                    <label class="inputLabel" for="street">street:</label>
+                    <input required class="inputField" type="text" id="street" name="street">
+                </div>
+                <div class="country inputWrapper">
+                    <label class="inputLabel" for="country">country:</label>
+                    <input required pattern="[A-Za-z]+" oninvalid="setCustomValidity('only letters are allowed')"
+                        class="inputField" type="text" id="country" name="country">
+                </div>
+                <div class="postCode inputWrapper">
+                    <label class="inputLabel" for="postCode">postCode:</label>
+                    <input required class="inputField" type="text" id="postCode" name="postCode">
+                </div>
+            </div>
+            <div class="deliverInstruction">
+                <label for="instruction">instructions for delivery:</label>
+                <textarea name="instruction" id="instruction" cols="20" rows="10"></textarea>
+            </div>
+            <div class="buttonWrapper">
+                <button class="checkoutBtn button" type="submit">
+                    Proceed
+                </button>
+                <button class="cancelBtn button">
+                    <a href="./cart.html">Cancel</a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="logIn" scroll="no">
+        <div class="logInCard">
+            <div class="logInButtons">
+                <h2>Sign in</h2>
+            </div>
+
+            <form action="submit" class="logInForm" id="logInForm">
+                <label for="email">Email address</label>
+                <input required type="text" id="email" placeholder="email">
+                <label for="password">Password</label>
+                <input required type="text" id="password" placeholder="password">
+                <button type="submit">Sign In</button>
+                <span class="registrationLink">or register <span class="registerToggle">here</span></span>
+            </form>
+
+
+            <div class="logInAlternatives">
+                <div><i class="fa-brands fa-apple"></i></div>
+                <div><i class="fa-brands fa-google"></i></div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="register" scroll="no">
+        <div class="logInCard">
+            <div class="logInButtons">
+                <h2>Register</h2>
+            </div>
+
+            <form action="submit" class="logInForm" id="registerForm">
+                <label for="Username">Username</label>
+                <input required type="text" id="Username" placeholder="Username">
+                <label for="email">Email address</label>
+                <input required type="text" id="email" placeholder="email">
+                <label for="password">Password</label>
+                <input required type="text" id="password" placeholder="password">
+                <button type="submit">Register</button>
+                <span class="registrationLink">or log in <span class="logInToggle">here</span></span>
+            </form>
+
+            <div class="logInAlternatives">
+                <div><i class="fa-brands fa-apple"></i></div>
+                <div><i class="fa-brands fa-google"></i></div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container footerWrapper">
+            <h1>Hangero</h1>
+            <span>© Hangero, Inc. 2022. We love our users!</span>
+        </div>
+    </div>
+</body>
+
+</html>

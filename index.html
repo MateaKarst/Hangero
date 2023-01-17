@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangero</title>
+    <!-- bootstrap ~ premade library components which was used for carousel-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- fontawesome library icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font flat icon ~ library icon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.min.css"
+        integrity="sha512-PvB3Q4vTvWD/9aiiELYI3uebup/4mtou3Mc/uGudC/Zl+C9BdKUkAI+5jORfA+fvLK4DpzC5VyEN7P2kK43hjg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/reusableStyle/nav.css">
+    <link rel="stylesheet" href="./assets/reusableStyle/footer.css">
+    <link rel="stylesheet" href="./assets/homeStyle/home.css">
+    <link rel="stylesheet" href="./assets/reusableStyle/logIn.css">
+    <link rel="stylesheet" href="./assets/reusableStyle/popUp.css">
+    <!-- personal scripts -->
+    <script defer src="./assets/scripts/slider.js"></script>
+    <script defer src="./assets/scripts/navScroll.js"></script>
+    <script defer src="./assets/scripts/timer.js"></script>
+    <script defer src="./assets/scripts/login.js"></script>
+    <!-- scrpt for adding the cards into the html, module for the js file since other files were imported,  defer because load after everything in html loaded -->
+    <script type="module" defer src="./assets/scripts/cardInjector.js"></script>
+    <script defer src="./assets/scripts/popUp.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- pc navbar -->
+        <nav class="navPC">
+            <div class="navWrapper">
+                <a class="logoWrapper" href="">
+                    <h1 class="Logo">Hangero</h1>
+                </a>
+                <div class="searchBar">
+                    <div class="searchInput">
+                        <input type="text" placeholder="search" name="searchBar" id="">
+                        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="personalIcons">
+                    <ul class="shoppingIcons">
+                        <button class="shoppingCart">
+                            <a class="iconWrapperPC" href="./pages/cart.html"><i
+                                    class="fi fi-rr-shopping-cart navIcons"></i></a>
+                        </button>
+                        <button class="favoriteItems dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-star navIcons"></i></a>
+                        </button>
+                        <button class="messages dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-envelope navIcons"></i> </a>
+                        </button>
+                        <button class="shop dropDownContainer">
+                            <a class="iconWrapperPC" href=""><i class="fi fi-rr-shop navIcons"></i></a>
+                        </button>
+
+                    </ul>
+                    <button class="dropDownContainer" id="logIn">
+                        <div class="profile">
+                            <img class="pfpIcon" src="https://data.whicdn.com/images/346235339/original.jpg" alt="">
+                        </div>
+                        <ul class="dropDown">
+                            <li><a href=""><i class="fi fi-rr-document-signed"></i>order</a></li>
+                            <li><a href=""><i class="fi fi-rr-bookmark"></i>saved Items</a></li>
+                            <li><a href=""><i class="fa-solid fa-shop"></i>shop</a></li>
+                            <li><a href=""><i class="fi fi-rr-dollar"></i>sell</a></li>
+                            <li><a href=""><i class="fi fi-rr-paper-plane"></i>messages</a></li>
+                            <li><a href=""><i class="fi fi-rr-settings-sliders"></i>settings</a></li>
+                            <li><a href=""><i class="fi fi-rr-info"></i>help</a></li>
+                            <li><a href=""><i class="fi fi-rr-comments-question"></i>send feedback</a></li>
+                            <li><a href=""> <i class="fi fi-rr-exit"></i>Sign Out</span></a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobileLogo">
+            <h1>Hangero</h1>
+        </div>
+        <div class="navMobile">
+            <div class="iconWrapper">
+                <a href="" class="shop"><i class="fa-solid fa-shop"></i></a>
+                <a href="" class="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="./pages/cart.html" class="shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="profile">
+                    <img class="pfpIcon" src="https://data.whicdn.com/images/346235339/original.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- gender section -->
+        <div class="container genderList">
+            <ul>
+                <li><a href="./pages/woman.html">women</a></li>
+                <li><a href="./pages/men.html">men</a></li>
+                <li><a href="./pages/child.html">children</a></li>
+            </ul>
+        </div>
+
+        <!-- item classification -->
+        <div class="nav2">
+            <ul class="container">
+                <li><a href="">new arrivals</a></li>
+                <li><a href="">trending</a></li>
+                <li class="importantItem"><a href="">sales</a></li>
+                <li><a href="">tops</a></li>
+                <li><a href="">bottoms</a></li>
+                <li><a href="">dresses</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- best deal wrapper -->
+    <div class="bestDealWrapper">
+        <!-- section title -->
+        <div class="bestDealTitle">
+            today's best deals!
+        </div>
+
+        <!-- the deal carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item contentWrapper0 active">
+                    <div class="carouselContent container">
+                        <div class="corouselCard">
+                            <h3 class="title">Stripped floral Dress</h3>
+                            <p class="desc">Slim red and black stripped floral dress</p>
+                            <div class="price">
+                                <div class="prevPrice">100€</div>
+                                <div class="price">now for <span class="highlight2">50€ only!</span></div>
+                            </div>
+                            <div class="timer">
+                                <div class="timerTitle">
+                                    <p>Offer ends in...</p>
+                                </div>
+                                <div class="timerWrapper">
+                                    <div class="timerContent">
+                                        <div class="minutes"></div> : <div class="highlight2" class="seconds"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btnWrapper">
+                                <button class="addtoCardBtn">Add to cart</button>
+                                <button class="buyBtn">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item contentWrapper1">
+                    <div class="carouselContent container">
+                        <div class="corouselCard">
+                            <h3 class="title">Summer shirt</h3>
+                            <p class="desc">Bare shoulders shirt</p>
+                            <div class="price">
+                                <div class="prevPrice">50€</div>
+                                <div class="price">now for <span class="highlight2">25€ only!</span></div>
+                            </div>
+                            <div class="timer">
+                                <div class="timerTitle">
+                                    <p>Offer ends in...</p>
+                                </div>
+                                <div class="timerWrapper">
+                                    <div class="timerContent">
+                                        <div class="minutes"></div> : <div class="highlight2" class="seconds"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btnWrapper">
+                                <button class="addtoCardBtn">Add to cart</button>
+                                <button class="buyBtn">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- minor ad section -->
+    <div class="adsSection">
+        <div class="container adsWrapper">
+            <div>ad1</div>
+            <div>ad2</div>
+            <div>ad3</div>
+            <div>ad4</div>
+            <div>ad5</div>
+        </div>
+    </div>
+
+    <!-- Flashsale section -->
+    <div class="container">
+        <div class="flashSales">
+            <div class="flashSalesTitle">
+                <h1>flash sales</h1>
+            </div>
+            <div class="scrollBtn">
+                <button class="preBtn"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+                <button class="nxtBtn"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+            </div>
+            <div class="flashSalesCards">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container footerWrapper">
+            <h1>Hangero</h1>
+            <span>© Hangero, Inc. 2022. We love our users!</span>
+        </div>
+    </div>
+
+    <!-- popUps -->
+
+    <!-- subletter -->
+    <div class="Newsletter">
+        <div class="popUp">
+            <h2 class="popUpTitle"><span class="highlight1">Subscribe</span> To Our Newsletter</h2>
+            <p class="popUpDesc">By subscribing you will get a <br> <span class="highlight2">free coupon code!</span>
+            </p>
+            <form action="submit" class="popUpForm">
+                <input type="text" class="formInput" placeholder="email">
+                <button type="submit" class="formBtn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- delivery popUp -->
+    <div class="deliveryWrapper">
+        <div class="delivery">
+            <div class="tag">
+                <i class="fa-solid fa-angle-right tagArrow"></i>
+            </div>
+            <h2 class="deliveryTitle"><span class="highlight1">Free</span> Shipping</h2>
+            <p class="deliveryDesc">Spend more than 50€ And get free shipping now!</p>
+            <div class="timer">
+                <div class="timerTitle">
+                    <p>Offer ends in...</p>
+                </div>
+                <div class="timerWrapper">
+                    <div class="timerContent">
+                        <div class="minutes"></div> : <div class="highlight2" class="seconds"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="deliveryIcons"><i class="fa-solid fa-truck-fast"></i><i class="fa-solid fa-gift"></i></div>
+        </div>
+    </div>
+
+    <div class="logIn" scroll="no">
+        <div class="logInCard">
+            <div class="logInButtons">
+                <h2>Sign in</h2>
+            </div>
+
+            <form action="submit" class="logInForm" id="logInForm">
+                <label for="email">Email address</label>
+                <input required type="text" id="email" placeholder="email">
+                <label for="password">Password</label>
+                <input required type="text" id="password" placeholder="password">
+                <button type="submit">Sign In</button>
+                <span class="registrationLink">or register <span class="registerToggle">here</span></span>
+            </form>
+
+
+            <div class="logInAlternatives">
+                <div><i class="fa-brands fa-apple"></i></div>
+                <div><i class="fa-brands fa-google"></i></div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="register" scroll="no">
+        <div class="logInCard">
+            <div class="logInButtons">
+                <h2>Register</h2>
+            </div>
+
+            <form action="submit" class="logInForm" id="registerForm">
+                <label for="Username">Username</label>
+                <input required type="text" id="Username" placeholder="Username">
+                <label for="email">Email address</label>
+                <input required type="text" id="email" placeholder="email">
+                <label for="password">Password</label>
+                <input required type="text" id="password" placeholder="password">
+                <button type="submit">Register</button>
+                <span class="registrationLink">or log in <span class="logInToggle">here</span></span>
+            </form>
+
+            <div class="logInAlternatives">
+                <div><i class="fa-brands fa-apple"></i></div>
+                <div><i class="fa-brands fa-google"></i></div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap link ~ premade library components which was used for carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

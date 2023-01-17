@@ -1,0 +1,101 @@
+@mixin hover() {
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #eeeeee;
+        transition: 0.4s;
+        box-shadow: inset 0px 0px 20px #000000;
+        box-shadow: 0px 0px 20px #c2c2c2;
+    }
+}
+
+.logIn, .register {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    overflow-y: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    .logInCard {
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+
+        .logInButtons {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .logInForm {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid black;
+
+            input {
+                margin-bottom: 20px;
+                background-color: #ededed;
+                border-radius: 40px;
+                padding: 7px 15px;
+                transition: 0.4s;
+
+                @include hover();
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                width: fit-content;
+                padding: 7px 15px;
+                margin: 20px auto 10px;
+                border-radius: 10px;
+                transition: 0.4s;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    transition: 0.4s;
+                    box-shadow: rgba(149, 157, 165, 0.567) 0px 8px 24px;
+                }
+            }
+        }
+
+        .registrationLink {
+            display: block;
+            margin:  10px auto;
+
+            .registerToggle, .logInToggle {
+                color: red;
+                font-weight: 900;
+                text-decoration: underline;
+            }
+        }
+
+        .logInAlternatives {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+
+            width: 150px;
+            font-size: 24px;
+            color: black;
+            justify-content: space-around;
+            margin: 10px auto 0;
+        }
+
+    }
+}

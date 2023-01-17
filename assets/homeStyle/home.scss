@@ -1,0 +1,392 @@
+@mixin hoverGender() {
+    // creating a variable called --c
+    --c: linear-gradient(#000 0 0);
+
+    padding-bottom: .15em;
+    // calling the variable
+    background: var(--c), var(--c);
+    background-size: .3em .1em;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transition: .3s linear, background-size .3s .2s linear;
+
+    &:hover {
+        background-size: 40% .1em;
+        background-position: 10% 100%, 90% 100%;
+    }
+}
+
+@mixin carouselBg($img) {
+    height: 100%;
+    width: 100%;
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    max-width: 1200px;
+}
+
+.genderList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 54px;
+
+    ul {
+        display: flex;
+        gap: 2rem;
+        text-transform: capitalize;
+
+        li {
+            @include hoverGender();
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+//nav2 is the clothes classification bar
+
+.nav2 {
+    height: 40px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    width: 100;
+
+    ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: 10px;
+
+        li {
+            cursor: pointer;
+            transition: .3s linear;
+
+            &:hover {
+                transition: .3s linear;
+                color: red;
+            }
+        }
+
+        .importantItem {
+            color: red;
+        }
+    }
+}
+
+// best deal
+.bestDealWrapper {
+
+    // deal title
+    .bestDealTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        font-size: 2.5rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: white;
+        background-color: #ad0707;
+    }
+
+    // carousel
+    .carousel-item {
+        width: 100%;
+        height: 625px;
+        background-color: #000;
+        color: white;
+
+        .carouselContent {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .corouselCard {
+                display: none;
+                background-color: #000;
+                padding: 25px;
+                border-radius: 20px;
+                min-width: 350px;
+                text-align: center;
+
+                .title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+
+                .desc {
+                    font-size: 1rem;
+                    margin-bottom: 30px;
+                }
+
+                .price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .prevPrice {
+                        text-decoration: line-through;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .timer {
+                    margin-bottom: 30px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+
+                    .addtoCardBtn {
+                        padding: 10px;
+                        background-color: white;
+                        border-radius: 20px;
+                        color: #000;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            transition: 0.3s ease-in-out;
+                            background-color: #ad0707;
+                            color: white;
+                        }
+                    }
+
+                    .buyBtn {
+                        padding: 10px;
+                        background-color: white;
+                        border-radius: 20px;
+                        color: #000;
+                        transition: 0.3s ease-in-out;
+                        transition: 0.3s ease-in-out;
+                        background-color: #ad0707;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .contentWrapper0 {
+        background-color: #ad0707;
+
+        .carouselContent {
+            @include carouselBg("../images/carousel/img0.png");
+        }
+    }
+
+    .contentWrapper1 {
+        background-color: #ad0707;
+
+        .carouselContent {
+            @include carouselBg("../images/carousel/img1.png");
+            background-position: 170%;
+            background-size: 115%;
+        }
+    }
+}
+
+// looping ads
+.adsSection {
+    min-height: 100px;
+    background-color: #DBDBDB;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+
+    .adsWrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+// flash sales
+
+.flashSales {
+    padding: 60px 0px 60px;
+    position: relative;
+
+    &Title {
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            white-space: nowrap;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+
+            &::after {
+                content: "!";
+            }
+        }
+    }
+
+    .scrollBtn {
+        position: absolute;
+        height: 350px;
+        bottom: 60px;
+        width: 100%;
+        display: none;
+        justify-content: space-between;
+        z-index: 1;
+
+        .nxtBtn {
+            height: 100%;
+        }
+
+        .preBtn {
+            height: 100%;
+        }
+    }
+
+    &Cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        overflow: scroll;
+        max-height: 1465px;
+        height: auto;
+        position: relative;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .itemCard {
+            width: 250px;
+            height: 350px;
+            margin-bottom: 22px;
+            // margin-right: 22px;
+            cursor: pointer;
+            position: relative;
+
+            .imgWrapper {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    // height: 100%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .infoItem {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                background-color: black;
+                color: white;
+                padding: 5px 10px;
+
+                .price {
+                    display: flex;
+                    gap: 10px;
+                    align-items: baseline;
+
+                    .discountedPrice {
+                        font-size: 1.5rem;
+                    }
+
+                    .originalPrice {
+                        text-decoration: line-through;
+                    }
+                }
+
+                .itemLeft {
+                    color: #EFC904;
+                }
+            }
+        }
+    }
+}
+
+
+// tablet
+@media screen and (min-width: 768px) {
+    .nav2 {
+        ul {
+            font-size: 1rem;
+        }
+    }
+
+    .bestDealWrapper {
+        .bestDealTitle {
+            font-size: 3rem;
+        }
+    }
+
+    .flashSales {
+        &Title {
+            h1 {
+                font-size: 3.75rem;
+            }
+        }
+
+        &Cards {
+            flex-direction: row;
+            height: 350px;
+
+            .itemCard {
+                margin-right: 22px;
+                margin-bottom: 0;
+
+                .imgWrapper {
+                    width: 250px;
+                    height: 350px;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// pc
+@media screen and (min-width: 992px) {
+    .bestDealWrapper {
+        // carousel
+        .carousel-item {
+            .carouselContent {
+                .corouselCard {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .genderList {
+        margin-top: 82px;
+
+        ul {
+            gap: 5rem;
+        }
+    }
+
+    .flashSales {
+        .scrollBtn {
+            display: flex;
+        }
+    }
+}

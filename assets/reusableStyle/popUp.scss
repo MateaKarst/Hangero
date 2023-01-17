@@ -1,0 +1,184 @@
+@mixin hover() {
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #eeeeee;
+        transition: 0.4s;
+        box-shadow: inset 0px 0px 20px #000000;
+        box-shadow: 0px 0px 20px #c2c2c2;
+    }
+}
+
+.highlight1 {
+    color: red;
+}
+
+.highlight2 {
+    color: yellow;
+}
+
+.Newsletter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.487);
+
+    .popUp {
+        background-color: black;
+        color: white;
+        text-align: center;
+        max-width: 350px;
+        border-radius: 10px;
+        padding: 20px 10px;
+
+        &Title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        &Desc {
+            font-size: 1rem;
+        }
+
+        .popUpForm {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            .formInput {
+                background-color: #ededed;
+                border-radius: 40px;
+                transition: 0.4s;
+                max-width: 80%;
+                color: #000000;
+                @include hover();
+            }
+
+            .formBtn {
+                background-color: red;
+                padding: 5px 15px;
+                border-radius: 10px;
+                transition: 0.3s ease-in-out;
+                border: 2px solid red;
+
+                &:hover {
+                    transition: 0.3s ease-in-out;
+                    background-color: #000000;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.deliveryWrapper {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    height: 40%;
+    max-width: 300px;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+    align-items: center;
+
+    .delivery {
+        background-color: #000000;
+        color: white;
+        border-radius: 10px 0 0 10px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        transform: translateX(100%);
+        .tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            height: 50px;
+            width: 50px;
+            background-color: #000000;
+            position: absolute;
+            top: 15px;
+            left: -49px;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            
+            i {
+                transform: rotate(180deg);
+                transition: 0.8s ease-in-out;
+            }
+        }
+
+        &Title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        &Desc {
+            font-size: 1rem;
+        }
+
+        .deliveryIcons {
+            margin-top: 20px;
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
+
+.timer {
+    width: 60%;
+    height: 50px;
+    border: 2px solid white;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    &Title {
+        position: absolute;
+        top: -30%;
+        width: 100%;
+        p {
+            font-size: 15px;
+            padding: 0 5px;
+            width: fit-content;
+            margin: auto;
+            color: white;
+            background-color: #000000;
+        }
+    
+    }
+    .timerWrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .timerContent {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .deliveryWrapper {
+        display: flex;
+    }
+}
