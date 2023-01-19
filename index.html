@@ -239,49 +239,49 @@
     <!-- subletter -->
     <div class="Newsletter">
         <div class="popUp">
+            <div id="closeNewsletter" class="closePopUp"><i class="fa-solid fa-xmark"></i></div>
             <h2 class="popUpTitle"><span class="highlight1">Subscribe</span> To Our Newsletter</h2>
             <p class="popUpDesc">By subscribing you will get a <br> <span class="highlight2">free coupon code!</span>
             </p>
             <form action="submit" class="popUpForm">
-                <input type="text" class="formInput" placeholder="email">
+                <input type="email" class="formInput" placeholder="email">
                 <button type="submit" class="formBtn">Subscribe</button>
             </form>
         </div>
     </div>
 
     <!-- delivery popUp -->
-    <div class="deliveryWrapper">
-        <div class="delivery">
-            <div class="tag">
-                <i class="fa-solid fa-angle-right tagArrow"></i>
-            </div>
-            <h2 class="deliveryTitle"><span class="highlight1">Free</span> Shipping</h2>
-            <p class="deliveryDesc">Spend more than 50€ And get free shipping now!</p>
-            <div class="timer">
-                <div class="timerTitle">
-                    <p>Offer ends in...</p>
-                </div>
-                <div class="timerWrapper">
-                    <div class="timerContent">
-                        <div class="minutes"></div> : <div class="highlight2" class="seconds"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="deliveryIcons"><i class="fa-solid fa-truck-fast"></i><i class="fa-solid fa-gift"></i></div>
+    <div class="delivery">
+        <div class="tag">
+            <i class="fa-solid fa-angle-right tagArrow"></i>
         </div>
+        <h2 class="deliveryTitle"><span class="highlight1">Free</span> Shipping</h2>
+        <p class="deliveryDesc">Spend more than 50€ And get free shipping now!</p>
+        <div class="timer">
+            <div class="timerTitle">
+                <p>Offer ends in...</p>
+            </div>
+            <div class="timerWrapper">
+                <div class="timerContent">
+                    <div class="minutes"></div> : <div class="highlight2" class="seconds"></div>
+                </div>
+            </div>
+        </div>
+        <div class="deliveryIcons"><i class="fa-solid fa-truck-fast"></i><i class="fa-solid fa-gift"></i></div>
     </div>
 
     <div class="logIn" scroll="no">
         <div class="logInCard">
+            <div id="closeNewsletter" class="closePopUp closeLogin"><i class="fa-solid fa-xmark"></i></div>
             <div class="logInButtons">
                 <h2>Sign in</h2>
             </div>
 
             <form action="submit" class="logInForm" id="logInForm">
                 <label for="email">Email address</label>
-                <input required type="text" id="email" placeholder="email">
-                <label for="password">Password</label>
-                <input required type="text" id="password" placeholder="password">
+                <input required type="email" id="email" placeholder="email">
+                <label for="current-password">Password</label>
+                <input required type="password" id="current-password" placeholder="password">
                 <button type="submit">Sign In</button>
                 <span class="registrationLink">or register <span class="registerToggle">here</span></span>
             </form>
@@ -297,6 +297,7 @@
 
     <div class="register" scroll="no">
         <div class="logInCard">
+            <div id="closeNewsletter" class="closePopUp closeLogin"><i class="fa-solid fa-xmark"></i></div>
             <div class="logInButtons">
                 <h2>Register</h2>
             </div>
@@ -304,10 +305,10 @@
             <form action="submit" class="logInForm" id="registerForm">
                 <label for="Username">Username</label>
                 <input required type="text" id="Username" placeholder="Username">
-                <label for="email">Email address</label>
-                <input required type="text" id="email" placeholder="email">
-                <label for="password">Password</label>
-                <input required type="text" id="password" placeholder="password">
+                <label for="registerEmail">Email address</label>
+                <input required type="email" id="registerEmail" placeholder="email">
+                <label for="register-password">Password</label>
+                <input required type="password" id="register-password" placeholder="password">
                 <button type="submit">Register</button>
                 <span class="registrationLink">or log in <span class="logInToggle">here</span></span>
             </form>

@@ -18,6 +18,24 @@
     color: yellow;
 }
 
+.closePopUp {
+    position: absolute;
+    right: -2%;
+    top: -3%;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    place-content: center;
+    i {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .Newsletter {
     position: fixed;
     top: 0;
@@ -37,6 +55,7 @@
         max-width: 350px;
         border-radius: 10px;
         padding: 20px 10px;
+        position: relative;
 
         &Title {
             font-size: 30px;
@@ -80,16 +99,6 @@
     }
 }
 
-.deliveryWrapper {
-    position: fixed;
-    right: 0;
-    top: 150px;
-    height: 40%;
-    max-width: 300px;
-    bottom: 0;
-    z-index: 99;
-    display: none;
-    align-items: center;
 
     .delivery {
         background-color: #000000;
@@ -97,7 +106,10 @@
         border-radius: 10px 0 0 10px;
         padding: 20px;
         text-align: center;
-        position: relative;
+        max-width: 300px;
+        position: fixed;
+        top: 200px;
+        right: 0;
         transform: translateX(100%);
         .tag {
             display: flex;
@@ -136,7 +148,6 @@
             gap: 10px;
         }
     }
-}
 
 .timer {
     width: 60%;

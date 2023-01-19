@@ -1,4 +1,5 @@
 const popUp = document.querySelector(".Newsletter");
+const closePopUp = document.querySelector("#closeNewsletter");
 const form = document.querySelector(".popUpForm");
 const input = document.querySelector(".formInput");
 
@@ -13,6 +14,8 @@ if (!popUpDisplayed) {
   localStorage.setItem("popUpDisplayed", true);
 }
 
+
+// newsletter submition
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // prevent the default action on form submit
 
@@ -23,10 +26,15 @@ form.addEventListener("submit", (e) => {
   }
   const email = input.value;
   popUp.style.display = "none";
-  // al
   alert("The email submitted is: " + email);
   isDisplayed = true;
 });
+
+// closing the popUp
+closePopUp.addEventListener("click", () => {
+  popUp.style.display = "none";
+  isDisplayed = true;
+})
 
 // delivery popUp
 const deliverWrapper = document.querySelector(".deliveryWrapper")
@@ -47,4 +55,3 @@ deliveryTag.addEventListener("click", () => {
   }
 });
 
-// delivery.style.setProperty('--before-content', '"<i class=\'fa-solid fa-angles-right\'></i>"');

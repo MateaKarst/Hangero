@@ -80,7 +80,7 @@
   background-color: #000;
   padding: 25px;
   border-radius: 20px;
-  min-width: 350px;
+  width: 350px;
   text-align: center;
 }
 .bestDealWrapper .carousel-item .carouselContent .corouselCard .title {

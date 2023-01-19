@@ -29,7 +29,6 @@
     <script defer src="../assets/scripts/navScroll.js"></script>
     <script defer src="../assets/scripts/addressSubmit.js"></script>
     <script defer src="../assets/scripts/login.js"></script>
-
     <!-- favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
 </head>
@@ -110,14 +109,11 @@
             <div class="address">
                 <div class="username inputWrapper">
                     <label class="inputLabel" for="username">Name:</label>
-                    <input name="username" required pattern="[A-Za-z]+"
-                        oninvalid="setCustomValidity('only letters are allowed')" class="inputField" type="text"
-                        id="username">
+                    <input name="username" required class="inputField" type="text" id="username">
                 </div>
                 <div class="city inputWrapper">
                     <label class="inputLabel" for="city">City:</label>
-                    <input required pattern="[A-Za-z]+" oninvalid="setCustomValidity('only letters are allowed')"
-                        class="inputField" type="text" id="city" name="city">
+                    <input required class="inputField" type="text" id="city" name="city">
                 </div>
                 <div class="street inputWrapper">
                     <label class="inputLabel" for="street">street:</label>
@@ -125,8 +121,7 @@
                 </div>
                 <div class="country inputWrapper">
                     <label class="inputLabel" for="country">country:</label>
-                    <input required pattern="[A-Za-z]+" oninvalid="setCustomValidity('only letters are allowed')"
-                        class="inputField" type="text" id="country" name="country">
+                    <input required class="inputField" type="text" id="country" name="country">
                 </div>
                 <div class="postCode inputWrapper">
                     <label class="inputLabel" for="postCode">postCode:</label>
@@ -141,9 +136,11 @@
                 <button class="checkoutBtn button" type="submit">
                     Proceed
                 </button>
-                <button class="cancelBtn button">
-                    <a href="./cart.html">Cancel</a>
-                </button>
+                <a href="./cart.html">
+                    <button class="cancelBtn button">
+                        Cancel
+                    </button>
+                </a>
             </div>
         </form>
     </div>

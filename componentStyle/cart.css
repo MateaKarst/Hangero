@@ -168,6 +168,9 @@
   flex-direction: column;
   gap: 10px;
 }
+.buttonWrapper a {
+  margin: auto;
+}
 .buttonWrapper .button {
   padding: 10px 15px;
   margin: auto;
